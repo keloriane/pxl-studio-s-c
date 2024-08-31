@@ -1,95 +1,51 @@
-import Image from "next/image";
+"use client";
+import Col from "@/components/common/Col";
+import GridContainer from "@/components/common/Container";
 import styles from "./page.module.css";
+import AnimatedText from "@/components/common/AnimatedText/AnimatedText";
 
 export default function Home() {
   return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
+    <main>
+      <GridContainer
+        colCount={20}
+        colGap={20}
+        className={styles.gridContainer}
+        rowGap={20}
+      >
+        <Col colStart={7} span={9}>
+          <AnimatedText
+            text="Template styled components PXL"
+            splitType="word"
+            as={"h1"}
+            className={styles.titleWrapper}
+          />
+        </Col>
+        <Col
+          colStart={[1, 1, 1, 1]}
+          span={[20, 20, 10, 10]}
+          className={styles.leftContainer}
         >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
           <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            tempore, beatae odit rem facilis explicabo expedita. Recusandae, non
+            debitis. Neque eligendi eveniet molestias odit. Iure perferendis
+            veritatis ipsa mollitia repellat!
           </p>
-        </a>
-      </div>
+        </Col>
+        <Col
+          colStart={[1, 1, 11, 11]}
+          span={[20, 20, 10, 10]}
+          className={styles.rightContainer}
+        >
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            tempore, beatae odit rem facilis explicabo expedita. Recusandae, non
+            debitis. Neque eligendi eveniet molestias odit. Iure perferendis
+            veritatis ipsa mollitia repellat!
+          </p>
+        </Col>
+      </GridContainer>
     </main>
   );
 }
